@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VietLove App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    window.onload = function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+
+      var androidLink = "https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME";
+      var iosLink = "https://apps.apple.com/app/idYOUR_APP_ID";
+      var fallbackLink = "https://linktr.ee/vietlove";
+
+      if (/android/i.test(ua)) {
+        window.location.href = androidLink;
+      } else if (/iPad|iPhone|iPod/.test(ua)) {
+        window.location.href = iosLink;
+      } else {
+        window.location.href = fallbackLink;
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting to VietLove...</p>
+</body>
+</html>
